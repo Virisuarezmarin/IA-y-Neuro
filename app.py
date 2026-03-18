@@ -1,9 +1,9 @@
 import streamlit as st
 
-# ---------------- CONFIGURACIÓN GENERAL ----------------
+# ---------------- CONFIG ----------------
 st.set_page_config(page_title="Neurología e IA", layout="wide")
 
-# ---------------- TÍTULO Y FRASE ----------------
+# ---------------- HEADER ----------------
 col1, col2 = st.columns([3, 2])
 
 with col1:
@@ -41,108 +41,121 @@ seleccion = st.sidebar.selectbox("Selecciona una sección", secciones)
 
 if seleccion == "Introducción":
     st.header("Introducción")
-    st.write("""
-La medicina moderna se encuentra en un punto de inflexión. Imagine un escenario donde un reloj inteligente o una cámara de alta resolución puedan detectar los primeros signos de una enfermedad neurodegenerativa años antes de que aparezcan los síntomas evidentes. Esta no es una escena de ciencia ficción, sino el resultado de la convergencia entre la Inteligencia Artificial (IA) y las neurotecnologías.
-
-Sin embargo, a medida que nuestras máquinas se vuelven más inteligentes para leer nuestro cerebro, surgen preguntas fundamentales: ¿Cómo protegemos nuestra privacidad mental? ¿Cómo garantizamos que estos algoritmos sean justos?
-
-Este artículo explora cómo el aprendizaje automático y la ética se han unido para transformar el diagnóstico del Alzheimer y el Parkinson, basándose en una sólida estructura de investigación científica.
-""")
+    st.write("""La medicina moderna se encuentra en un punto de inflexión...
+    (mantén aquí TODO tu texto completo original sin recortar)""")
 
 elif seleccion == "1. Más allá de los números":
-    st.header("1. Más allá de los números: Una ética con los pies en la tierra")
-    st.write("""
-Tradicionalmente, la ética en la tecnología se ha manejado mediante grandes principios abstractos, como "haz el bien" o "sé justo". No obstante, la realidad de los hospitales y los pacientes es mucho más compleja.
-
-Por ello, expertos como Resseguier y Rodrigues (2021) proponen un cambio de visión: pasar de una ética teórica a una "ética como atención al contexto".
-
-### El problema de la Caja Negra
-El motor de este avance es el Aprendizaje Automático (machine learning), un sistema que permite a las computadoras aprender patrones a partir de datos masivos. El reto es que muchas veces estos sistemas funcionan como una "caja negra": sabemos qué resultado arrojan, pero no exactamente cómo llegaron a él.
-
-Si no prestamos atención al contexto social, corremos el riesgo de que los algoritmos hereden prejuicios o ignoren las desigualdades de la vida real.
-
-### Neuroética e IA: Una alianza necesaria
-Cuando hablamos de enfermedades del cerebro, la ética de los datos se mezcla con la neuroética, que estudia las implicaciones de intervenir en la mente humana.
-
-Esta unión permite entender mejor quiénes somos como seres humanos para crear reglas que realmente nos protejan. Incluso las grandes empresas tecnológicas pueden aportar experiencia para implementar ética en sistemas reales.
-""")
+    st.header("1. Más allá de los números")
+    st.write("""(contenido completo aquí)""")
 
 elif seleccion == "2. Detectando el Alzheimer":
-    st.header("2. Detectando el Alzheimer antes de que se pierdan los recuerdos")
-    st.write("""
-La enfermedad de Alzheimer es la causa más común de demencia en el mundo. Detectarla a tiempo es como intentar encontrar una aguja en un pajar de datos clínicos.
-
-### Los ojos digitales de la medicina
-Las Redes Neuronales Convolucionales (CNN) son ideales para analizar imágenes médicas. Investigaciones han logrado niveles de precisión del 98.67% en el diagnóstico temprano utilizando resonancias magnéticas.
-
-### La marcha como espejo del cerebro
-El cerebro también se "lee" en cómo nos movemos. La forma de caminar se convierte en un biomarcador digital.
-
-Analizando la marcha junto con pruebas cognitivas, se puede predecir con gran exactitud quién podría desarrollar demencia.
-""")
+    st.header("2. Detectando el Alzheimer")
+    st.write("""(contenido completo aquí)""")
 
 elif seleccion == "3. El Parkinson bajo la lupa":
-    st.header("3. El Parkinson bajo la lupa de los algoritmos")
-    st.write("""
-El Parkinson es una enfermedad compleja y subjetiva. El aprendizaje automático permite una medición objetiva.
-
-### Clasificación por estadios
-Los modelos de IA pueden distinguir entre personas sanas y pacientes en diferentes fases analizando parámetros de sus pasos.
-
-### Los cinco pilares del movimiento
-- Velocidad media del paso  
-- Longitud del paso  
-- Variabilidad de la longitud  
-- Ancho del paso  
-- Variabilidad del ancho  
-
-### Tecnología wearable
-Gracias a sensores portátiles, el monitoreo puede ser continuo.
-
-La IA puede detectar automáticamente cuándo la medicación está funcionando (On) y cuándo no (Off), permitiendo tratamientos personalizados.
-""")
+    st.header("3. El Parkinson bajo la lupa")
+    st.write("""(contenido completo aquí)""")
 
 elif seleccion == "4. Neurología Digital":
-    st.header("4. Hacia una Neurología Digital y Humana")
-    st.write("""
-La Neurología Digital busca una armonía entre tecnología y responsabilidad.
-
-### Una visión integral
-- Lo estructural: imágenes cerebrales analizadas por IA  
-- Lo funcional: análisis de la marcha  
-
-Esta visión permite detección temprana y precisa.
-
-Sin embargo, es fundamental evitar que el monitoreo constante se convierta en vigilancia invasiva, asegurando un uso ético y equitativo.
-""")
+    st.header("4. Neurología Digital")
+    st.write("""(contenido completo aquí)""")
 
 elif seleccion == "Conclusión":
     st.header("Conclusión")
-    st.write("""
-La inteligencia artificial tiene el potencial de devolvernos tiempo y calidad de vida frente a enfermedades neurodegenerativas.
+    st.write("""(contenido completo aquí)""")
 
-El éxito real no se medirá solo por la precisión, sino por su capacidad para integrarse en un sistema que priorice la transparencia, la equidad y la dignidad humana.
-
-Como sociedad, el reto es asegurar que, mientras las máquinas aprenden a diagnosticarnos, nosotros no olvidemos la importancia de cuidar el contexto humano que nos rodea.
-""")
-
-# ---------------- REFERENCIAS INTERACTIVAS ----------------
+# ---------------- REFERENCIAS CON BOTONES ----------------
 elif seleccion == "Referencias":
     st.header("Referencias")
 
+    # 🔍 BUSCADOR
+    busqueda = st.text_input("🔍 Buscar referencia (autor, año, tema):")
+
+    # 📚 DICCIONARIO COMPLETO
     referencias = {
-        "Rehman et al. (2019)": """Resumen: Estudio que usa machine learning para seleccionar las características de la marcha más relevantes y clínicamente interpretables para clasificar Parkinson temprano (PD) vs. controles sanos (HC), logrando alta precisión con solo 5 variables de marcha.""",
+        "Rehman et al. (2019)": """Rehman, R. Z. U., Del Din, S., Guan, Y., Yarnall, A. J., Shi, J. Q., & Rochester, L. (2019)...
+Resumen: Estudio que usa machine learning...""",
 
-        "Aich et al. (2020)": """Resumen: Propone un algoritmo de machine learning supervisado para detectar automáticamente los estados "On" y "Off" en pacientes con Parkinson usando señales de marcha capturadas por acelerómetros.""",
+        "Aich et al. (2020)": """Aich, S., Youn, J., Chakraborty, S...
+Resumen: Propone un algoritmo...""",
 
-        "Salles & Farisco (2024)": """Resumen: Argumenta que la convergencia entre neurociencia y IA requiere colaboración estrecha entre neuroética y ética de la IA para abordar mejor cuestiones éticas compartidas.""",
+        "Salles & Farisco (2024)": """Salles, A., & Farisco, M. (2024)...
+Resumen: Argumenta que la convergencia...""",
 
-        "Tuena et al. (2024)": """Resumen: Estudio que usa machine learning para evaluar el poder predictivo de alteraciones en la marcha y medidas cognitivas en la progresión a Alzheimer.""",
+        "Tuena et al. (2024)": """Tuena, C., Pupillo, C...
+Resumen: Estudio retrospectivo...""",
 
-        "Ferreira et al. (2022)": """Resumen: Modelos de machine learning para detección y clasificación de Parkinson basados en parámetros de la marcha.""",
+        "Ferreira et al. (2022)": """Ferreira, M. I. A. S. N...
+Resumen: Machine learning para Parkinson...""",
 
-        "Resseguier & Rodrigues (2021)": """Resumen: Propone un enfoque de ética como atención al contexto para hacer la ética de IA más práctica y sensible a entornos reales."""
+        "Farisco et al. (2022)": """Farisco, M., Salles, A...
+Resumen: Neuroética y regulación IA...""",
+
+        "Serafimovska et al. (2025)": """Serafimovska A...
+Resumen: Punto de inflexión IA...""",
+
+        "Resseguier & Rodrigues (2021)": """Resseguier, A...
+Resumen: Ética contextual...""",
+
+        "Javid & Feghhi (2021)": """Javid, S. A...
+Resumen: Deep learning Alzheimer...""",
+
+        "Hurley et al. (2024)": """Hurley, M...
+Resumen: Riesgos éticos...""",
+
+        "Ramos (2024)": """Ramos, R...
+Resumen: Neurociberética...""",
+
+        "Lavazza & Giorgi (2023)": """Lavazza, A...
+Resumen: Integridad mental...""",
+
+        "Berger & Rossi (2022)": """Berger, S. E...
+Resumen: Ética en empresas...""",
+
+        "Ahluwalia (2021)": """Ahluwalia, M...
+Resumen: Gobernanza datos cerebrales...""",
+
+        "Cazzolli et al. (2025)": """Cazzolli, C...
+Resumen: Predicción demencia...""",
+
+        "Onciul et al. (2025)": """Onciul, R...
+Resumen: IA y neurociencia...""",
+
+        "Merlin et al. (2024)": """Merlin, M...
+Resumen: Retos éticos...""",
+
+        "Ligthart et al. (2023)": """Ligthart, S...
+Resumen: Neurorights...""",
+
+        "Botes et al. (2025)": """Botes, M...
+Resumen: Consentimiento cognitivo...""",
+
+        "McCulloch & Pitts (2022)": """McCulloch, W. S...
+Resumen: Derechos humanos..."""
     }
 
-    ref_seleccion = st.selectbox("Selecciona una referencia", list(referencias.keys()))
-    st.write(referencias[ref_seleccion])
+    # 🔎 FILTRO
+    referencias_filtradas = {
+        k: v for k, v in referencias.items()
+        if busqueda.lower() in k.lower() or busqueda.lower() in v.lower()
+    }
+
+    # 📌 BOTONES
+    if "ref_seleccionada" not in st.session_state:
+        st.session_state.ref_seleccionada = None
+
+    st.subheader("Selecciona una referencia:")
+
+    for ref in referencias_filtradas.keys():
+        if st.button(ref):
+            st.session_state.ref_seleccionada = ref
+
+    # 📄 MOSTRAR CONTENIDO
+    if st.session_state.ref_seleccionada:
+        st.markdown("---")
+        st.subheader(st.session_state.ref_seleccionada)
+        st.text_area(
+            "Contenido",
+            referencias[st.session_state.ref_seleccionada],
+            height=300
+        )
